@@ -4,17 +4,16 @@ import './TextContainer.css';
 import ToDoContainer from '../../containers/ToDoContainer.js';
 
 class TextContainer extends Component {
-  render() {
-
-    console.log('toDos ', this.props.toDos);
-    
+  render() {   
     const mappedIdeas = this.props.toDos.map((idea, i) => (
       <Card {...idea} key={idea.id} />
     )) || [];
 
     return (
-      <div className='text-container'>
-        { mappedIdeas }
+      <div className='lower-section'>
+        <div className='text-container'>
+          { mappedIdeas }
+        </div>
       </div>
     )
   }
