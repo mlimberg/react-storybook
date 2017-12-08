@@ -1,10 +1,11 @@
 import React from 'react';
+import './Card.css';
 
 const Card = ({ title, body, id }) => {
   return (
-    <div key={ id }>
-      <h2>{ title }</h2>
-      <p>{ body }</p>
+    <div className='card'>
+      <h2 className='card-title'>{ title }</h2>
+      <p className='card-body'>{ body }</p>
     </div>
   )
 }
