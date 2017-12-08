@@ -1,0 +1,15 @@
+.card {
+  width: 70%;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px auto;
+  background-color: rgba(197, 238, 225, 0.21);
+  font-family: sans-serif;
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 2em;
+  color: green;
+  border-bottom: 1px dashed green;
+}

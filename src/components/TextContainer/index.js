@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import Card from '../Card'
 import './TextContainer.css';
+import ToDoContainer from '../../containers/ToDoContainer.js';
 
-export default class TextContainer extends Component {
+class TextContainer extends Component {
   render() {
-    console.log(this.props.ideas)
+
+    console.log('toDos ', this.props.toDos);
     
-    const mappedIdeas = this.props.ideas.map((idea, i) => (
-      <Card {...idea} />
+    const mappedIdeas = this.props.toDos.map((idea, i) => (
+      <Card {...idea} key={idea.id} />
     )) || [];
 
     return (
@@ -17,3 +19,5 @@ export default class TextContainer extends Component {
     )
   }
 }
+
+export default ToDoContainer(TextContainer);

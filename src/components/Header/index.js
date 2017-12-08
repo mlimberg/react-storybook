@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './Header.css';
+import ToDoContainer from '../../containers/ToDoContainer.js';
 
-export default class Header extends Component {
+class Header extends Component {
   constructor() {
     super();
     this.state = {
@@ -20,7 +21,7 @@ export default class Header extends Component {
   submitText(e) {
     e.preventDefault()
     const newIdea = Object.assign({}, this.state, { id: Date.now()})
-    this.setState({ title: '', body: '' }, () => this.props.submitText(newIdea))
+    this.setState({ title: '', body: '' }, () => this.props.addToDo(newIdea))
   }
 
   render() {
@@ -51,3 +52,5 @@ export default class Header extends Component {
     )
   }
 }
+
+export default ToDoContainer(Header);
